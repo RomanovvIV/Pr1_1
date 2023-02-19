@@ -1,0 +1,41 @@
+
+package com.mycompany.pr_1_2_v4;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author pc
+ */
+public class Pr_1_2_v4 {
+
+    public static void main(String[] args) {
+        System.out.println("RIBO-04-21 (2 курс 4 семестр) 4вариант Романов ИВ");
+        
+        Scanner scan = new Scanner(System.in);
+        System.out.print("нач.сумма= ");
+        float b = scan.nextInt();
+        
+        System.out.print("%= ");
+        float p = scan.nextInt();
+        
+        System.out.print("длительность= "); 
+        int r = scan.nextInt();
+        
+        float d;// сумма с процентами
+        double sum = 0;// сумма процентов
+        float i = 0;
+        
+ 
+        while(i<r) {
+            i++;
+            d=(p/10/12)*b;
+            b=b+d;
+            sum=sum+d;
+            System.out.println(i+"мес._сумма="+b+"_%"+d);
+        }
+        System.out.println("общая сумма:");
+        System.out.println(sum);
+ 
+    }
+}
